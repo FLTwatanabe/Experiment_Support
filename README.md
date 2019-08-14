@@ -59,16 +59,16 @@ pip install pytorch torchvision opencv-python
 ### 学習データを作る
 * LabelImgを使ってアノテーションデータを作る。  
 注） アノテーション形式をYOLOにすることを忘れずに！！  
-* configファイルを作成する。--data_nameオプションに、対象となるデータが格納されたディレクトリの名称（例: <your-data-name>）を指定してください。
-注）データのディレクトリには、'images': jpg画像が格納、'labels': アノテーションデータが格納、'config': 設定ファイルが格納される
-注）LabelImgでアノテーションデータを作成すると、'labels'ディレクトリに'classes.txt'が生成されますが、そのファイルはconfigに移動しておいてください。
+* configファイルを作成する。--data_nameオプションに、対象となるデータが格納されたディレクトリの名称（例: <your-data-name>）を指定してください。  
+注）データのディレクトリには、'images': jpg画像が格納、'labels': アノテーションデータが格納、'config': 設定ファイルが格納される  
+注）LabelImgでアノテーションデータを作成すると、'labels'ディレクトリに'classes.txt'が生成されますが、そのファイルはconfigに移動しておいてください。  
 ```
 python create_cfg.py --mode cfg --dataset_type yolo --data_name <your-data> --class_num 1 --ratio 0.6
 ```
 最終的に  
-data/<your-data-name>/images/*.jpg  
-data/<your-data-name>/labels/*.txt  
-data/<your-data-name>/config/*  
+data/your-data-name/images/*.jpg  
+data/your-data-name/labels/*.txt  
+data/your-data-name/config/*  
 というディレクトリ構造になります。  
 configディレクトリに、yolov3.cfgとclasses.txtをおいてください。
 
