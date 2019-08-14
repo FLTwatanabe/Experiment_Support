@@ -1,0 +1,4 @@
+classes= 1
+train=data/<your-project>/train.txt
+valid=data/<your-project>/test.txt
+names=data/<your-project>/classes.txt
